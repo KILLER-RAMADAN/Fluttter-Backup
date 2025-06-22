@@ -80,6 +80,38 @@ class Appsettings extends StatelessWidget {
                     ),
                     Divider(),
                     ListTile(
+                      title: Text(
+                        "193".tr,
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      trailing: Icon(Icons.language),
+                      onTap: () {
+                        Get.defaultDialog(
+                            title: "Language",
+                            content: Column(
+                              children: [
+                                ListTile(
+                                  title: Text("English"),
+                                  onTap: () {
+                                    Get.updateLocale(Locale('en', 'US'));
+                                    Get.forceAppUpdate();
+                                    Get.back();
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("Arabic"),
+                                  onTap: () {
+                                    Get.updateLocale(Locale('ar', 'EG'));
+                                    Get.forceAppUpdate();
+                                    Get.back();
+                                  },
+                                ),
+                              ],
+                            ));
+                      },
+                    ),
+                    Divider(),
+                    ListTile(
                       onTap: () {
                         controller.get_notification_permision();
                       },

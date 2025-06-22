@@ -71,6 +71,7 @@ dependencies:
   notification_listener_service: ^0.3.4
   local_auth: ^2.3.0
   file_picker: ^8.1.2
+  validation_textformfield: ^2.2.5
   #filter_text: ^1.0.2
 
 

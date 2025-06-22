@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controller/auth/signupcontroller.dart';
@@ -12,7 +11,6 @@ import 'package:testapp/views/widgets/auth/customebodylinetext.dart';
 import 'package:testapp/views/widgets/auth/customeformfaildauth.dart';
 import 'package:testapp/views/widgets/auth/customeheadlinetext.dart';
 import 'package:testapp/views/widgets/auth/forget_btn.dart';
-
 
 class Signup extends StatelessWidget {
   const Signup({super.key});
@@ -35,19 +33,19 @@ class Signup extends StatelessWidget {
               child: HandlingDataViewRequest(
             statusRequest: controller.statusRequest,
             widget: Container(
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                padding:const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 child: Form(
                   key: controller.formstate,
                   child: ListView(
                     children: [
-                      AuthSigninImage(
+                      const AuthSigninImage(
                         imag_height: 100,
                         head_iamg: AppImage.Signup_Image,
                       ),
                       Customeheadlinetext(
                         Headline_Text: '15'.tr,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Customebodylinetext(Body_Txet: "25".tr),
@@ -77,14 +75,14 @@ class Signup extends StatelessWidget {
                           Text_Hint: "20".tr,
                           icondate: Icons.email_outlined,
                           mycontroller: controller.email),
-                      SizedBox(
+                    const  SizedBox(
                         height: 20,
                       ),
                       Customeformfaildauth(
                           hide_text: false,
                           Isnumber: true,
                           valid: (val) {
-                            return validInput(val!, 9, 9, "phone");
+                            return validInput(val!, 9, 15, "phone");
                           },
                           Text_Label: "28".tr,
                           Text_Hint: "29".tr,
@@ -105,7 +103,9 @@ class Signup extends StatelessWidget {
                             },
                             Text_Label: "21".tr,
                             Text_Hint: "22".tr,
-                            icondate: Icons.lock,
+                            icondate: controller.isshowpassword
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
                             mycontroller: controller.password),
                       ),
                       ForgetBtn(

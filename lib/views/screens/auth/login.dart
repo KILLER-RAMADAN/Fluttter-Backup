@@ -5,7 +5,9 @@ import 'package:testapp/core/class/handlingdataview.dart';
 import 'package:testapp/core/constant/colors.dart';
 import 'package:testapp/core/constant/imageasset.dart';
 import 'package:testapp/core/functions/alert.dart';
+import 'package:testapp/core/functions/check_whatssapp.dart';
 import 'package:testapp/core/functions/valid_input.dart';
+import 'package:testapp/core/shared/notification_access.dart';
 import 'package:testapp/views/widgets/auth/auth_custome_btn.dart';
 import 'package:testapp/views/widgets/auth/auth_signin_image.dart';
 import 'package:testapp/views/widgets/auth/customebodylinetext.dart';
@@ -22,19 +24,48 @@ class Login extends StatelessWidget {
     Get.put(Signincontrollerimp());
 
     return Scaffold(
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {
-        //     launchUrl(Uri.parse(
-        //         "https://api.whatsapp.com/send?phone=+966539174225&text=hello!"));
-        //   },
-        //   backgroundColor: AppColors.primary_color,
-        //   child: Icon(
-        //     Icons.phone,
-        //     color: AppColors.white,
-        //   ),
-        // ),
         backgroundColor: Colors.white,
         appBar: AppBar(
+          actions: [
+            IconButton(
+              icon: Icon(Icons.notifications, color: AppColors.grey),
+              onPressed: () {
+                get_notification_permision();
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.language, color: AppColors.grey),
+              onPressed: () {
+                Get.defaultDialog(
+                  title: "Select Language",
+                  content: Column(
+                    children: [
+                      ListTile(
+                        title: Text("English"),
+                        onTap: () {
+                          Get.updateLocale(Locale('en', 'US'));
+                          Get.back();
+                        },
+                      ),
+                      ListTile(
+                        title: Text("Arabic"),
+                        onTap: () {
+                          Get.updateLocale(Locale('ar', 'EG'));
+                          Get.back();
+                        },
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ],
+          leading: IconButton(
+            icon: Icon(Icons.door_back_door, color: AppColors.grey),
+            onPressed: () {
+              exitalert();
+            },
+          ),
           centerTitle: true,
           backgroundColor: Colors.white,
           title: Text("14".tr,
@@ -96,7 +127,9 @@ class Login extends StatelessWidget {
                               },
                               Text_Label: "21".tr,
                               Text_Hint: "22".tr,
-                              icondate: Icons.lock_outline,
+                              icondate: controller.isshowpassword
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
                               mycontroller: controller.password),
                         ),
                         SizedBox(

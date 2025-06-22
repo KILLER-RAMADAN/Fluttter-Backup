@@ -1,6 +1,6 @@
 class Api {
   // Main Constants //
-  static const String Server = "hflti.top/ecommerce";
+  static const String Server = "https://hflti.top/ecommerce";
   //static const String imagespath = "https://myluxurystory.com/ecommerce/upload";
   // Main Constants //
 

@@ -1309,6 +1309,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.5.1"
+  validation_textformfield:
+    dependency: "direct main"
+    description:
+      name: validation_textformfield
+      sha256: d88d7b56f144690d82b3598262e8f2f3099c93d684a872ae42c230c4b4adaa6f
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.5"
   vector_math:
     dependency: transitive
     description:

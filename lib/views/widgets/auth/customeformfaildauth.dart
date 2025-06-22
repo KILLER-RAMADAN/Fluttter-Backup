@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:testapp/core/constant/colors.dart';
-
 
 class Customeformfaildauth extends StatelessWidget {
   final String Text_Label;
@@ -37,15 +35,13 @@ class Customeformfaildauth extends StatelessWidget {
             hintText: Text_Hint,
             iconColor: AppColors.primary_color,
             hoverColor: AppColors.primary_color,
-            focusColor: AppColors.primary_color,
+            focusColor: Colors.blueGrey,
             hintStyle: TextStyle(fontFamily: "Lato", fontSize: 15),
             contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             floatingLabelAlignment: FloatingLabelAlignment.start,
-            label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text(Text_Label)),
+            label: Text(Text_Label),
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(30))),
+                borderRadius: BorderRadius.all(Radius.circular(5))),
             suffix: InkWell(
               child: Icon(icondate),
               onTap: onTapicon,

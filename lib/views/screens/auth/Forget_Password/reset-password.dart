@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -13,7 +12,6 @@ import 'package:testapp/views/widgets/auth/auth_signin_image.dart';
 import 'package:testapp/views/widgets/auth/customebodylinetext.dart';
 import 'package:testapp/views/widgets/auth/customeformfaildauth.dart';
 import 'package:testapp/views/widgets/auth/customeheadlinetext.dart';
-
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
@@ -90,7 +88,9 @@ class ResetPassword extends StatelessWidget {
                               },
                               Text_Label: "43".tr,
                               Text_Hint: "43".tr,
-                              icondate: Icons.lock_outline,
+                              icondate: controller.isshowpassword
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
                               mycontroller: controller.repass),
                         ),
                         const SizedBox(

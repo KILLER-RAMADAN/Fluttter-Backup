@@ -194,13 +194,14 @@ class Mytranslation extends Translations {
           "183": "الاعدادات",
           "184": " منح الوصول للإشعارات",
           "185": "المحتوى التعليمي",
-          "186": "هذا الجهاز لا يدعم القياسات الحيوية",
+          "186": "المستخدم لم يقم بتفعيل البصمة",
           "187": "لم يتم العثور على أي بيانات حيوية",
           "188": "أضف بصمة الإصبع ! ",
           "189": "لا شكرا",
           "190": "يرجى تسجيل الدخول أولاً لتفعيل هذه الميزة",
           "191": "الرجاء تقديم بصمة إصبعك",
           "192": "فشل المصادقة",
+          "193": "تغيير اللغه",
         },
         "en": {
           "1": "Choose Language",
@@ -403,6 +404,7 @@ class Mytranslation extends Translations {
           "190": "Please Login First To Activate This Feature",
           "191": 'Please Provide Your Fingerprint',
           "192": "Authentication Failed",
+          "193": "Change Language",
         }
       };
 }
