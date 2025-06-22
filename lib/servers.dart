@@ -1,6 +1,6 @@
 class Api {
   // Main Constants //
-  static const String Server = "http://10.0.2.2:8080/spam_detection";
+  static const String Server = "hflti.top/ecommerce";
   //static const String imagespath = "https://myluxurystory.com/ecommerce/upload";
   // Main Constants //
 
@@ -22,7 +22,7 @@ class Api {
   //  _____________________Home___________________ //
 
   //  ____________________notfication___________________ //
- // static const String notfication = "$Server/notfication.php";
+  // static const String notfication = "$Server/notfication.php";
 
   //  ____________________notfication___________________ //
   static const String edu_content = "$Server/educitional_content/edu.php";

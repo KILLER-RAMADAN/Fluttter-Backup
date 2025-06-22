@@ -7,12 +7,15 @@ import 'package:testapp/Binding/initialbinding.dart';
 import 'package:testapp/core/localizations/changelocal.dart';
 import 'package:testapp/core/localizations/translation.dart';
 import 'package:testapp/core/services/services.dart';
+import 'package:testapp/firebase_options.dart';
 import 'package:testapp/notifications_handling.dart';
 import 'routes.dart';
 
+
+
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // FOR INITIALIZING WIDGETS
-  await Firebase.initializeApp(); // FOE FIREBASE
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseMessaging.instance.requestPermission(); // FOR REQUEST PERMISSION
   await initialServices(); // FOR SHAREDPREFERENCES
   setupNotificationChannel(); // TO SETUP NOTIFICATION CHANNEL

@@ -44,8 +44,6 @@ class Signincontrollerimp extends Signincontroller {
   @override
   login() async {
     if (formstate.currentState!.validate()) {
-      Get.offNamed(AppRoutes.home);
-      myservices.sharedPreferences.setString("step", "2");
       statusRequest = StatusRequest.loading;
       update();
       var response = await logindata.postlogindata(email.text, password.text);
@@ -66,15 +64,6 @@ class Signincontrollerimp extends Signincontroller {
 
           myservices.sharedPreferences.setString("step", "2");
           Get.offNamed(AppRoutes.home);
-          // send_notify.sendNotifications(
-          //     fcmToken: send_notify.token,
-          //     title: "153".tr +
-          //         " ${myservices.sharedPreferences.getString("username")}",
-          //     body: "154".tr,
-          //     userId:
-          //         "${myservices.sharedPreferences.getString("id").toString()}",
-          //     page_id: "1",
-          //     page_name: "home");
         } else {
           mainalert("57".tr, "62".tr);
           statusRequest = StatusRequest.failure;
@@ -172,10 +161,10 @@ class Signincontrollerimp extends Signincontroller {
     auth = LocalAuthentication();
     email = TextEditingController();
     password = TextEditingController();
-    FirebaseMessaging.instance.getToken().then((value) {
-      print(value);
-      email.text = value.toString();
-    });
+    // FirebaseMessaging.instance.getToken().then((value) {
+    //   print(value);
+    //   email.text = value.toString();
+    // });
     initial_fingerprint(1);
     super.onInit();
   }

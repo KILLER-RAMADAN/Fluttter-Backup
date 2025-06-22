@@ -17,7 +17,6 @@ class Localcontroller extends GetxController {
   bool supportState = false;
 
   void onInit() {
-    FirebaseMessaging.instance.subscribeToTopic("Spam");
     get_notification_permision();
     requistpermitionnotfy();
     printconfig();
@@ -26,20 +25,6 @@ class Localcontroller extends GetxController {
    // handling_notification();
     super.onInit();
   }
-
-  // void handling_notification() {
-  //   FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-  //     print("✅ المستخدم ضغط على الإشعار وفتح التطبيق");
-  //     // ممكن تروح على شاشة معينة بناءً على البيانات:
-  //     //  print(message.data);
-  //     String? screen = message.data['screen'];
-  //     if (screen != null) {
-  //       Get.toNamed("/$screen");
-  //     } else {
-  //       Get.toNamed(AppRoutes.home);
-  //     }
-  //   });
-  // }
 
   check_app_lang() {
     String? sharedPrefRence = myservices.sharedPreferences.getString("lang");
