@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:otp_text_field_v2/otp_field_v2.dart';
@@ -11,8 +10,6 @@ import 'package:testapp/views/widgets/auth/auth_signin_image.dart';
 import 'package:testapp/views/widgets/auth/customebodylinetext.dart';
 import 'package:testapp/views/widgets/auth/customeheadlinetext.dart';
 
-
-
 class Verifycodesignup extends StatelessWidget {
   const Verifycodesignup({super.key});
 
@@ -20,10 +17,10 @@ class Verifycodesignup extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(Verifysignupcontrollerimp());
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text(
             "36".tr,
             style: Theme.of(context)

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controller/auth/signincontroller.dart';
+import 'package:testapp/controller/themes/theme_controller.dart';
 import 'package:testapp/core/class/handlingdataview.dart';
 import 'package:testapp/core/constant/colors.dart';
 import 'package:testapp/core/constant/imageasset.dart';
@@ -22,9 +23,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(Signincontrollerimp());
+    ThemeController themeController = Get.find<ThemeController>();
 
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           actions: [
             IconButton(
@@ -34,9 +36,10 @@ class Login extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.language, color: AppColors.grey),
+              icon: Icon(Icons.language_outlined, color: AppColors.grey),
               onPressed: () {
                 Get.defaultDialog(
+                  onCancel: () => Get.back(),
                   title: "Select Language",
                   content: Column(
                     children: [
@@ -59,6 +62,17 @@ class Login extends StatelessWidget {
                 );
               },
             ),
+            GetBuilder<ThemeController>(builder: (controller) {
+              return IconButton(
+                icon: Icon(
+                  controller.isDarkMode ? Icons.dark_mode : Icons.light_mode,
+                  color: Colors.grey,
+                ),
+                onPressed: () {
+                  themeController.toggleTheme();
+                },
+              );
+            }),
           ],
           leading: IconButton(
             icon: Icon(Icons.door_back_door, color: AppColors.grey),
@@ -67,7 +81,7 @@ class Login extends StatelessWidget {
             },
           ),
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text("14".tr,
               style: TextStyle(
                   color: AppColors.grey, fontWeight: FontWeight.bold)),
@@ -149,7 +163,8 @@ class Login extends StatelessWidget {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: AppColors.white,
+                                    color: Theme.of(context)
+                                        .scaffoldBackgroundColor,
                                     borderRadius: BorderRadius.circular(5)),
                                 height: 50,
                                 width: 50,

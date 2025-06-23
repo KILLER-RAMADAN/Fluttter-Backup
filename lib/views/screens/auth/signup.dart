@@ -19,10 +19,10 @@ class Signup extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(Signupcontrollerimp());
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text("24".tr,
               style: TextStyle(
                   color: AppColors.grey, fontWeight: FontWeight.bold)),
@@ -33,7 +33,8 @@ class Signup extends StatelessWidget {
               child: HandlingDataViewRequest(
             statusRequest: controller.statusRequest,
             widget: Container(
-                padding:const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 child: Form(
                   key: controller.formstate,
                   child: ListView(
@@ -75,7 +76,7 @@ class Signup extends StatelessWidget {
                           Text_Hint: "20".tr,
                           icondate: Icons.email_outlined,
                           mycontroller: controller.email),
-                    const  SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Customeformfaildauth(

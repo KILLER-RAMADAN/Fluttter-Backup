@@ -18,10 +18,10 @@ class Successresetpass extends StatelessWidget {
         Get.put(SuccessResetPassControllerimp());
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Text(
           "46".tr,
           style: TextStyle(color: AppColors.grey, fontWeight: FontWeight.bold),

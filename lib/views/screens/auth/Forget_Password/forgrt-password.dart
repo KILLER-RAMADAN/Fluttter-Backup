@@ -22,10 +22,10 @@ class ForgrtPassword extends StatelessWidget {
     Get.put(Forgetpasscontrollerimp());
 
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor:Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text(
             "35".tr,
             style:

@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:otp_text_field_v2/otp_field_style_v2.dart';
 import 'package:otp_text_field_v2/otp_field_v2.dart';
 import 'package:testapp/controller/auth/forgetpassword/forget_passwordcontroller.dart';
 import 'package:testapp/controller/auth/forgetpassword/verifycode-reset-controller.dart';
@@ -12,8 +12,6 @@ import 'package:testapp/views/widgets/auth/auth_signin_image.dart';
 import 'package:testapp/views/widgets/auth/customebodylinetext.dart';
 import 'package:testapp/views/widgets/auth/customeheadlinetext.dart';
 
-
-
 class Verifypassword extends StatelessWidget {
   const Verifypassword({super.key});
 
@@ -23,10 +21,10 @@ class Verifypassword extends StatelessWidget {
     Forgetpasscontrollerimp forgetpass = Get.put(Forgetpasscontrollerimp());
 
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text(
             "36".tr,
             style: Theme.of(context)
@@ -61,7 +59,12 @@ class Verifypassword extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                       OTPTextFieldV2(
+                      OTPTextFieldV2(
+                        otpFieldStyle: OtpFieldStyle(
+                          focusBorderColor: AppColors.primary_color,
+                          enabledBorderColor: AppColors.primary_color,
+                          errorBorderColor: Colors.red,
+                        ),
                         length: 5,
                         width: MediaQuery.of(context).size.width,
                         textFieldAlignment: MainAxisAlignment.spaceAround,
