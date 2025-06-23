@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
@@ -15,7 +14,7 @@ class onBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(On_Boarding_imp());
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
           child: const Column(
         children: const [

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,6 +13,7 @@ class appLanguage extends GetView<Localcontroller> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Container(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -57,6 +57,4 @@ class appLanguage extends GetView<Localcontroller> {
       ),
     );
   }
-  
-  
 }

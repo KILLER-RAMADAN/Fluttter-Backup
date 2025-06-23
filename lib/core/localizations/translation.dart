@@ -202,6 +202,8 @@ class Mytranslation extends Translations {
           "191": "الرجاء تقديم بصمة إصبعك",
           "192": "فشل المصادقة",
           "193": "تغيير اللغه",
+          "194": "الانجليزيه",
+          "195": "العربيه",
         },
         "en": {
           "1": "Choose Language",
@@ -405,6 +407,8 @@ class Mytranslation extends Translations {
           "191": 'Please Provide Your Fingerprint',
           "192": "Authentication Failed",
           "193": "Change Language",
+          "194":"English",
+          "195":"Arabic",
         }
       };
 }

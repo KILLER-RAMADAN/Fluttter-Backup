@@ -40,18 +40,18 @@ class Login extends StatelessWidget {
               onPressed: () {
                 Get.defaultDialog(
                   onCancel: () => Get.back(),
-                  title: "Select Language",
+                  title: "193".tr,
                   content: Column(
                     children: [
                       ListTile(
-                        title: Text("English"),
+                        title: Text("194".tr),
                         onTap: () {
                           Get.updateLocale(Locale('en', 'US'));
                           Get.back();
                         },
                       ),
                       ListTile(
-                        title: Text("Arabic"),
+                        title: Text("195".tr),
                         onTap: () {
                           Get.updateLocale(Locale('ar', 'EG'));
                           Get.back();

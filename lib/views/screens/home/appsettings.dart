@@ -80,18 +80,21 @@ class Appsettings extends StatelessWidget {
                     ),
                     Divider(),
                     ListTile(
-                      title: Text(
-                        "193".tr,
-                        style: TextStyle(color: Colors.black),
-                      ),
+                      title: Text("193".tr,
+                          style: TextStyle(
+                            color: Theme.of(context)
+                                .textTheme
+                                .headlineLarge!
+                                .color,
+                          )),
                       trailing: Icon(Icons.language),
                       onTap: () {
                         Get.defaultDialog(
-                            title: "Language",
+                            title: "193".tr,
                             content: Column(
                               children: [
                                 ListTile(
-                                  title: Text("English"),
+                                  title: Text("194".tr),
                                   onTap: () {
                                     Get.updateLocale(Locale('en', 'US'));
                                     Get.forceAppUpdate();
@@ -99,7 +102,7 @@ class Appsettings extends StatelessWidget {
                                   },
                                 ),
                                 ListTile(
-                                  title: Text("Arabic"),
+                                  title: Text("195".tr),
                                   onTap: () {
                                     Get.updateLocale(Locale('ar', 'EG'));
                                     Get.forceAppUpdate();

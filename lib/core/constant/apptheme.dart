@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+
 ThemeData ArabicTheme = ThemeData(
     fontFamily: "Cairo",
     textTheme: TextTheme(
         headlineSmall: TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 30,
-      color: Colors.blueGrey,
+      color: Colors.black,
     )));
 
 ThemeData EnglishTheme = ThemeData(
@@ -15,5 +16,5 @@ ThemeData EnglishTheme = ThemeData(
         headlineSmall: TextStyle(
       fontWeight: FontWeight.normal,
       fontSize: 25,
-      color: Colors.blueGrey,
+      color: Colors.black,
     )));
