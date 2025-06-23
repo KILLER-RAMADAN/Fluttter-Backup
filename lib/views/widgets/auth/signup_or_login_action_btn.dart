@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomTextSignUpOrSignIn extends StatelessWidget {
@@ -19,7 +18,12 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(textone),
+        Text(
+          textone,
+          style: TextStyle(
+            color: Theme.of(context).textTheme.bodySmall!.color,
+          ),
+        ),
         InkWell(
           onTap: onTap,
           child: Text(texttwo,

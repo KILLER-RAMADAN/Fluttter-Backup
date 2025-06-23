@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 
 class Themes {
   static final light = ThemeData(
+    fontFamily: "Noon",
+    textTheme: TextTheme(
+        bodyLarge: TextStyle(),
+        bodyMedium: TextStyle(),
+        titleLarge: TextStyle(),
+        headlineSmall: TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 25,
+        )),
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
     primarySwatch: Colors.blue,
@@ -9,26 +18,24 @@ class Themes {
       backgroundColor: Colors.blue,
       foregroundColor: Colors.white,
     ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.black),
-      bodyMedium: TextStyle(color: Colors.black),
-      titleLarge: TextStyle(color: Colors.black),
-    ),
   );
 
   static final dark = ThemeData(
+    fontFamily: "Noon",
+    textTheme: TextTheme(
+        bodyLarge: TextStyle(),
+        bodyMedium: TextStyle(),
+        titleLarge: TextStyle(),
+        headlineSmall: TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 25,
+        )),
     brightness: Brightness.dark,
     scaffoldBackgroundColor: Colors.black,
     primarySwatch: Colors.deepPurple,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black,
       foregroundColor: Colors.white,
-    ),
-    textTheme: const TextTheme(
-      
-      bodyLarge: TextStyle(color: Colors.white),
-      bodyMedium: TextStyle(color: Colors.white),
-      titleLarge: TextStyle(color: Colors.white),
     ),
   );
 }

@@ -97,6 +97,8 @@ class Appsettings extends StatelessWidget {
                                   title: Text("194".tr),
                                   onTap: () {
                                     Get.updateLocale(Locale('en', 'US'));
+                                    controller.myServices.sharedPreferences
+                                        .setString("lang", "en");
                                     Get.forceAppUpdate();
                                     Get.back();
                                   },
@@ -105,6 +107,8 @@ class Appsettings extends StatelessWidget {
                                   title: Text("195".tr),
                                   onTap: () {
                                     Get.updateLocale(Locale('ar', 'EG'));
+                                    controller.myServices.sharedPreferences
+                                        .setString("lang", "ar");
                                     Get.forceAppUpdate();
                                     Get.back();
                                   },

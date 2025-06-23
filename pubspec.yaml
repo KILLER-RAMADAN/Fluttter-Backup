@@ -125,5 +125,8 @@ flutter:
     - family: Lato
       fonts:
         - asset: assets/fonts/lato/Lato-Regular.ttf
+    - family: Noon
+      fonts:
+        - asset: assets/fonts/noon/Noon.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

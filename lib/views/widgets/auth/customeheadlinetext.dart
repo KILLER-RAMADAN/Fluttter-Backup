@@ -7,14 +7,9 @@ class Customeheadlinetext extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        Headline_Text,
-        textAlign: TextAlign.center,
-        style: Theme.of(context)
-            .textTheme
-            .headlineSmall!
-            .copyWith(fontSize: 35, fontFamily: "Cairo"),
-      ),
+      child: Text(Headline_Text,
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headlineMedium!),
     );
   }
 }

@@ -7,6 +7,7 @@ import 'package:testapp/core/constant/colors.dart';
 import 'package:testapp/core/constant/imageasset.dart';
 import 'package:testapp/core/functions/alert.dart';
 import 'package:testapp/core/functions/check_whatssapp.dart';
+
 import 'package:testapp/core/functions/valid_input.dart';
 import 'package:testapp/core/shared/notification_access.dart';
 import 'package:testapp/views/widgets/auth/auth_custome_btn.dart';
@@ -22,7 +23,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(Signincontrollerimp());
+    Signincontrollerimp signcontrller = Get.put(Signincontrollerimp());
     ThemeController themeController = Get.find<ThemeController>();
 
     return Scaffold(
@@ -47,6 +48,8 @@ class Login extends StatelessWidget {
                         title: Text("194".tr),
                         onTap: () {
                           Get.updateLocale(Locale('en', 'US'));
+                          signcontrller.myservices.sharedPreferences
+                              .setString("lang", "en");
                           Get.back();
                         },
                       ),
@@ -54,6 +57,8 @@ class Login extends StatelessWidget {
                         title: Text("195".tr),
                         onTap: () {
                           Get.updateLocale(Locale('ar', 'EG'));
+                          signcontrller.myservices.sharedPreferences
+                              .setString("lang", "ar");
                           Get.back();
                         },
                       ),
