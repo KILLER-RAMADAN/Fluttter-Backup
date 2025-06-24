@@ -1,17 +1,15 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:notification_listener/notification_listener.dart';
-import 'package:testapp/core/constant/apptheme.dart';
 import 'package:testapp/core/services/services.dart';
 import '../functions/fcm.dart';
 
 class Localcontroller extends GetxController {
   Locale? language;
-  ThemeData Apptheme = EnglishTheme;
+  // ThemeData Apptheme = EnglishTheme;
   MyServices myservices = Get.find();
   late final LocalAuthentication auth;
   bool supportState = false;
@@ -22,7 +20,7 @@ class Localcontroller extends GetxController {
     printconfig();
     get_location_permision();
     check_app_lang();
-   // handling_notification();
+    // handling_notification();
     super.onInit();
   }
 
@@ -30,15 +28,15 @@ class Localcontroller extends GetxController {
     String? sharedPrefRence = myservices.sharedPreferences.getString("lang");
     if (sharedPrefRence == "ar") {
       language = const Locale("ar");
-      Apptheme = ArabicTheme;
+      // Apptheme = ArabicTheme;
       update();
     } else if (sharedPrefRence == "en") {
       language = const Locale("en");
-      Apptheme = EnglishTheme;
+      //Apptheme = EnglishTheme;
       update();
     } else {
       language = Locale(Get.deviceLocale!.languageCode);
-      Apptheme = EnglishTheme;
+      // Apptheme = EnglishTheme;
       update();
     }
   }
@@ -46,9 +44,9 @@ class Localcontroller extends GetxController {
   changelang(String langcode) {
     Locale local = Locale(langcode);
     myservices.sharedPreferences.setString("lang", langcode);
-    Apptheme = langcode == "ar" ? ArabicTheme : EnglishTheme;
+    // Apptheme = langcode == "ar" ? ArabicTheme : EnglishTheme;
     Get.updateLocale(local);
-    Get.changeTheme(Apptheme);
+    //  Get.changeTheme(Apptheme);
     update();
   }
 

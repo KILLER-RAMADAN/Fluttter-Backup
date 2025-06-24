@@ -72,6 +72,8 @@ dependencies:
   local_auth: ^2.3.0
   file_picker: ^8.1.2
   validation_textformfield: ^2.2.5
+  intl_mobile_field: ^2.0.2
+  mobikul_carousel_slider: ^0.0.4
   #filter_text: ^1.0.2
 
 

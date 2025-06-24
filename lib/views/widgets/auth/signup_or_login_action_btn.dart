@@ -21,7 +21,7 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
         Text(
           textone,
           style: TextStyle(
-            color: Theme.of(context).textTheme.bodySmall!.color,
+            color: Theme.of(context).textTheme.bodyLarge!.color,
           ),
         ),
         InkWell(

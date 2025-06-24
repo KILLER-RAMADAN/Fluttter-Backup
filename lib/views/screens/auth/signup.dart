@@ -1,5 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl_mobile_field/countries.dart';
+import 'package:intl_mobile_field/intl_mobile_field.dart';
+import 'package:intl_mobile_field/mobile_number.dart';
 import 'package:testapp/controller/auth/signupcontroller.dart';
 import 'package:testapp/core/class/handlingdataview.dart';
 import 'package:testapp/core/constant/colors.dart';
@@ -79,16 +84,64 @@ class Signup extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      Customeformfaildauth(
-                          hide_text: false,
-                          Isnumber: true,
-                          valid: (val) {
-                            return validInput(val!, 9, 15, "phone");
+                      // Customeformfaildauth(
+                      //     hide_text: false,
+                      //     Isnumber: true,
+                      //     valid: (val) {
+                      //       return validInput(val!, 9, 15, "phone");
+                      //     },
+                      //     Text_Label: "28".tr,
+                      //     Text_Hint: "29".tr,
+                      //     icondate: Icons.phone_android_outlined,
+                      //     mycontroller: controller.phone),
+
+                      IntlMobileField(
+                          favorite: const ['EG', 'US', 'SA'],
+                          favoriteIcon: Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                          ),
+                          favoriteIconPosition: Position.trailing,
+                          favoriteCountryCodePosition: Position.trailing,
+                          initialCountryCode: 'BD',
+                          languageCode: controller.myservices.sharedPreferences
+                                      .getString("lang") ==
+                                  "en"
+                              ? "en"
+                              : "ar", // default is 'en'
+                          onCountryChanged: (country) {
+                            controller.countrycode.text = country.code;
+                            controller.countryname.text = country.name;
+                            print('Country code changed to: ${country.code}');
+                            print('Country name changed to: ${country.name}');
+                            print('Country changed to: ${country.name}');
                           },
-                          Text_Label: "28".tr,
-                          Text_Hint: "29".tr,
-                          icondate: Icons.phone_android_outlined,
-                          mycontroller: controller.phone),
+                          decoration: InputDecoration(
+                            labelText: "29".tr,
+                            border: const OutlineInputBorder(
+                              borderSide: BorderSide(),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                            ),
+                            prefixIcon:
+                                const Icon(Icons.phone_android_outlined),
+                          ),
+                          disableLengthCounter: false,
+                          onChanged: (mobile) {
+                            print(mobile.completeNumber);
+                            controller.phone.text = mobile.completeNumber;
+                          },
+                          validator: (mobileNumber) {
+                            if (mobileNumber == null ||
+                                mobileNumber.number.isEmpty) {
+                              return '53'.tr;
+                            }
+                            if (!RegExp(r'^[0-9]+$')
+                                .hasMatch(mobileNumber.number)) {
+                              return "196".tr;
+                            }
+                            return null;
+                          }),
                       SizedBox(
                         height: 20,
                       ),

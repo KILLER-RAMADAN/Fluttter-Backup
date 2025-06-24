@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:testapp/controller/home/Settings_controller.dart';
+import 'package:testapp/controller/themes/theme_controller.dart';
 import 'package:testapp/core/constant/colors.dart';
 import 'package:testapp/core/constant/imageasset.dart';
 
@@ -11,6 +12,7 @@ class Appsettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SettingsController controller = Get.put(SettingsController());
+    ThemeController themeController = Get.find<ThemeController>();
     return Scaffold(
         appBar: AppBar(
           title: Text("183".tr),
@@ -117,6 +119,41 @@ class Appsettings extends StatelessWidget {
                             ));
                       },
                     ),
+
+                    //// change mode ///
+                    Divider(),
+                    ListTile(
+                      title: Text("change Theme",
+                          style: TextStyle(
+                            color: Theme.of(context)
+                                .textTheme
+                                .headlineLarge!
+                                .color,
+                          )),
+                      trailing: Icon(Icons.light_mode),
+                      onTap: () {
+                        Get.defaultDialog(
+                            title: "Change Theme",
+                            content: Column(
+                              children: [
+                                ListTile(
+                                  title: Text("dark"),
+                                  onTap: () {
+                                    themeController.setDarkMode();
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("light"),
+                                  onTap: () {
+                                    themeController.setLightMode();
+                                  },
+                                ),
+                              ],
+                            ));
+                      },
+                    ),
+
+                    /// change mode ///
                     Divider(),
                     ListTile(
                       onTap: () {

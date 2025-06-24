@@ -15,7 +15,8 @@ class Themes {
     scaffoldBackgroundColor: Colors.white,
     primarySwatch: Colors.blue,
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.blue,
+      iconTheme: IconThemeData(color: Colors.grey),
+      backgroundColor: Colors.white,
       foregroundColor: Colors.white,
     ),
   );
@@ -34,6 +35,7 @@ class Themes {
     scaffoldBackgroundColor: Colors.black,
     primarySwatch: Colors.deepPurple,
     appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(color: Colors.grey),
       backgroundColor: Colors.black,
       foregroundColor: Colors.white,
     ),

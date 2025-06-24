@@ -204,6 +204,8 @@ class Mytranslation extends Translations {
           "193": "تغيير اللغه",
           "194": "الانجليزيه",
           "195": "العربيه",
+          "196": 'الأرقام فقط مسموح بها'
+
         },
         "en": {
           "1": "Choose Language",
@@ -409,6 +411,7 @@ class Mytranslation extends Translations {
           "193": "Change Language",
           "194":"English",
           "195":"Arabic",
+          "196": 'Only digits are allowed'
         }
       };
 }

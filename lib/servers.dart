@@ -28,7 +28,7 @@ class Api {
   static const String edu_content = "$Server/educitional_content/edu.php";
   static const String edu_view = "$Server/educitional_content/view.php";
 
-  //  ____________________edu_content___________________ //
+// ________________________sider____________//
 
-//  ____________________edu_content___________________ //
+  static const String sider = "$Server/upload/slider";
 }

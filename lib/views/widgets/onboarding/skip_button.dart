@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -18,7 +17,7 @@ class Skip_Button_on_Boarding extends GetView<On_Boarding_imp> {
         onPressed: () {
           cotroller.skip_btn();
         },
-        textColor: Colors.black,
+        textColor: Theme.of(context).textTheme.bodyLarge!.color,
         child: Text(
           "13".tr,
           style: TextStyle(fontSize: 20),

@@ -580,10 +580,10 @@ packages:
     dependency: transitive
     description:
       name: google_maps_flutter_web
-      sha256: a9822dbf31a3f76f239f6bda346511b051d3edf739806e9091be2729e8b645de
+      sha256: ce2cac714e5462bf761ff2fdfc3564c7e5d7ed0578268dccb0a54dbdb1e6214e
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.12+1"
+    version: "0.5.12+2"
   google_sign_in:
     dependency: "direct main"
     description:
@@ -744,6 +744,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  intl_mobile_field:
+    dependency: "direct main"
+    description:
+      name: intl_mobile_field
+      sha256: c4f625e3ab782a07ee2df61f52430000b412a2414baeb457f6458ffe241f4002
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   jiffy:
     dependency: "direct main"
     description:
@@ -864,6 +872,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  mobikul_carousel_slider:
+    dependency: "direct main"
+    description:
+      name: mobikul_carousel_slider
+      sha256: fc5af1c7fdf54035ceb589d64f4d00ceb243fb91920c0e347613b3346bdffe6e
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   nested:
     dependency: transitive
     description:

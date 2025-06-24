@@ -6,8 +6,6 @@ import 'package:testapp/core/class/handlingdataview.dart';
 import 'package:testapp/core/constant/colors.dart';
 import 'package:testapp/core/constant/imageasset.dart';
 import 'package:testapp/core/functions/alert.dart';
-import 'package:testapp/core/functions/check_whatssapp.dart';
-
 import 'package:testapp/core/functions/valid_input.dart';
 import 'package:testapp/core/shared/notification_access.dart';
 import 'package:testapp/views/widgets/auth/auth_custome_btn.dart';
@@ -163,31 +161,32 @@ class Login extends StatelessWidget {
                           height: 15,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .scaffoldBackgroundColor,
-                                    borderRadius: BorderRadius.circular(5)),
-                                height: 50,
-                                width: 50,
-                                child: IconButton(
-                                    onPressed: () {
-                                      controller.initial_fingerprint(0);
-                                    },
-                                    icon: Icon(
-                                      Icons.fingerprint,
-                                      size: 43,
-                                    )),
-                              ),
-                            ),
+                            // Expanded(
+                            //   flex: 1,
+                            //   child: Container(
+                            //     decoration: BoxDecoration(
+                            //         color: Theme.of(context)
+                            //             .scaffoldBackgroundColor,
+                            //         borderRadius: BorderRadius.circular(5)),
+                            //     height: 50,
+                            //     width: 50,
+                            //     child: IconButton(
+                            //         onPressed: () {
+                            //           controller.initial_fingerprint(0);
+                            //         },
+                            //         icon: Icon(
+                            //           Icons.fingerprint,
+                            //           size: 43,
+                            //         )),
+                            //   ),
+                            // ),
                             SizedBox(
                               width: 5,
                             ),
                             Expanded(
-                              flex: 3,
+                              flex: 2,
                               child: AuthCustomeBtn(
                                 Btn_Text: "14".tr,
                                 onPressed: () {

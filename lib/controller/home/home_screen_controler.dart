@@ -28,7 +28,6 @@ class HomeScreenControlerimp extends HomeScreenControler {
 
   List<IconData> listOfIcons = [
     Icons.home_rounded,
-    Icons.messenger,
     Icons.settings,
   ];
 
