@@ -1,4 +1,4 @@
-
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -161,10 +161,10 @@ class Signincontrollerimp extends Signincontroller {
     auth = LocalAuthentication();
     email = TextEditingController();
     password = TextEditingController();
-    // FirebaseMessaging.instance.getToken().then((value) {
-    //   print(value);
-    //   email.text = value.toString();
-    // });
+    FirebaseMessaging.instance.getToken().then((value) {
+      print(value);
+      email.text = value.toString();
+    });
     // initial_fingerprint(1);
     super.onInit();
   }

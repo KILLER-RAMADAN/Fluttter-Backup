@@ -22,7 +22,7 @@ class Themes {
   );
 
   static final dark = ThemeData(
-    fontFamily: "Noon",
+    fontFamily: "Cairo",
     textTheme: TextTheme(
         bodyLarge: TextStyle(),
         bodyMedium: TextStyle(),

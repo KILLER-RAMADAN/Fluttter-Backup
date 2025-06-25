@@ -11,7 +11,7 @@ Future<void> checkInitialMessage() async {
     print(message.data);
     String? screen = message.data['screen'];
     if (screen != null) {
-      Get.offNamed("/$screen");
+      Get.toNamed("/$screen");
     } else {
       Get.offNamed(AppRoutes.home);
     }
