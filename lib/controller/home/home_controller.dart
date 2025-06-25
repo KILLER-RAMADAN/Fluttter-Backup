@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:notification_listener/models/notification.dart';
 import 'package:notification_listener/notification_listener.dart';
