@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-## This repo Is Used For our Projects AS Standerd ##
+## This repo Is Used For our Projects AS Standard ##
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
