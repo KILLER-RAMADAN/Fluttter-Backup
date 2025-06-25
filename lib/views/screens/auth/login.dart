@@ -106,7 +106,7 @@ class _LoginState extends State<Login> {
           centerTitle: true,
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: Text("14".tr,
-              style: TextStyle(
+              style: const TextStyle(
                   color: AppColors.grey, fontWeight: FontWeight.bold)),
           elevation: 0.0,
         ),
