@@ -43,7 +43,7 @@ class Signincontrollerimp extends Signincontroller {
 
   @override
   login() async {
-    if (formstate.currentState!.validate()) {
+    if (formstate.currentState != null && formstate.currentState!.validate()) {
       statusRequest = StatusRequest.loading;
       update();
       var response = await logindata.postlogindata(email.text, password.text);
@@ -165,7 +165,7 @@ class Signincontrollerimp extends Signincontroller {
     //   print(value);
     //   email.text = value.toString();
     // });
-    initial_fingerprint(1);
+    // initial_fingerprint(1);
     super.onInit();
   }
 

@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobikul_carousel_slider/mobikul_carousel_slider.dart';
-import 'package:path/path.dart';
 import 'package:testapp/controller/home/home_controller.dart';
 import 'package:testapp/core/class/handlingdataview.dart';
-import 'package:testapp/core/constant/imageasset.dart';
 import 'package:testapp/servers.dart';
 
 class Home extends StatelessWidget {

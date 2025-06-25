@@ -1,10 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl_mobile_field/countries.dart';
 import 'package:intl_mobile_field/intl_mobile_field.dart';
-import 'package:intl_mobile_field/mobile_number.dart';
 import 'package:testapp/controller/auth/signupcontroller.dart';
 import 'package:testapp/core/class/handlingdataview.dart';
 import 'package:testapp/core/constant/colors.dart';
@@ -103,7 +99,7 @@ class Signup extends StatelessWidget {
                           ),
                           favoriteIconPosition: Position.trailing,
                           favoriteCountryCodePosition: Position.trailing,
-                          initialCountryCode: 'BD',
+                          initialCountryCode: 'EG',
                           languageCode: controller.myservices.sharedPreferences
                                       .getString("lang") ==
                                   "en"
