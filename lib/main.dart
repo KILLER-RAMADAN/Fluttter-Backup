@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
       () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         translations: Mytranslation(),
+        
         getPages: routes,
         themeMode: themeController.themeMode.value,
         darkTheme: Themes.dark,
